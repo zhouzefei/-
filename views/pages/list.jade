@@ -1,0 +1,11 @@
+extends ../layout
+block content
+	.container
+		.row
+			h3 #{listData.title}
+	.container
+		.row
+			each item in listData.img
+				.col-md-2
+					.thumbnail
+						img(src="#{item}")
