@@ -1,10 +1,10 @@
-爬虫练手
+###爬虫练手
 #### 第一步：启动mongo数据库服务
 #### 第二步：启动数据抓取服务 node server.js  访问localhost:3000，将数据存入mongo中
 #### 第三步：启动数组展示服务 npm start       访问localhost:3001，将数据中数据展示于界面
 
-#### 思路解析
-依赖库使用：
+### 思路解析
+- 依赖库使用：
   superagent：作为发起请求模块
   cheerio：解析dom操作（类似jq）
   eventproxy：模块控制并发（多线程发起请求）
@@ -19,6 +19,10 @@ img,href作为抓取字段入库。在请求每一屏的过程同时发起相对
 pageUrls.length*15 一页展示15条数据，一共75条数据进行爬取,
 存入数据，通过board_id作为key，进行查询相关列表数据。
 
+- demo
+ ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/1.png)
+ ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/2.png)
+ ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/3.png)
 
 
 
