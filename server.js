@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost/huabanData');
 var ep = new eventproxy(), 
   urlsArray = [],	//存放爬取网址
   pageUrls = [],	//存放收集文章页面网站
-  pageNum = 30,	//要爬取文章的页数
+  pageNum = 5,	//要爬取文章的页数
   startDate=new Date(),//开始时间
   endDate,//结束时间
   imgurl="http://hbimg.b0.upaiyun.com/",
@@ -33,8 +33,6 @@ http.createServer(function (request, response) {
     .end(function(err,pres){
         var htmlStr=pres.text,flag='app.page["recommends"] = ',lastflag='app.page["explores"] = ';
         var str=htmlStr.substring(htmlStr.indexOf(flag)+flag.length,htmlStr.indexOf(lastflag)).replace(/\s/g,"");
-        console.log(str)
-        
         if(oldhtmlStr.indexOf(str)<0){
           oldhtmlStr.push(str);
           str=JSON.parse((str.substring(0,str.length-1)).replace(/\n/g, "\\n"));
@@ -67,7 +65,7 @@ http.createServer(function (request, response) {
         }
     });
   });
-  ep.after('huabanHtml',pageUrls.length*4,function(articUrls){
+  ep.after('huabanHtml',pageUrls.length*15,function(articUrls){
       var curCount=0;
       var reptileMove=function(url,callback){
         var delay=parseInt((Math.random()*30000000)%1000,10);
