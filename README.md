@@ -19,9 +19,10 @@
   存入数据，通过board_id作为key，进行查询相关列表数据。
 
 ### demo
-- ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/1.png)
-- ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/2.png)
-- ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/3.png)
+
+ ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/3.png)
+ ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/1.png)
+ ![Set URL Schema in XCode](https://github.com/zhouzefei/pachong/blob/master/2.png)
 
 
 
